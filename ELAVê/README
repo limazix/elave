@@ -1,0 +1,13 @@
+Lib usada: Android Annotation
+
+Link: https://github.com/excilys/androidannotations/wiki
+
+Ativação:
+
+1. Va nas propriedades do projeto
+2. Cliquem em Java Compiler > Annotation Proccessing
+3. Clique em Enable Project Specific...
+4. Clique para adicionar um "chave-valor" em Processor Options
+5. Coloque como Key: androidManifest
+6. Coloque como Value: [o path ABSOLUTO para o androidManifest.xml do seu projeto]
+7. Salve, ok, ok, ok, clean project e... profit
