@@ -24,7 +24,8 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 	protected Camera camera;
 	protected Filter filter;
 	
-	private List<Component> components;
+	private Component rootComponent;
+	private List<Component> components;		
 	
 	private int width;
 	private int height;
@@ -42,7 +43,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 		mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 
 		coder = new CameraDecoder();
-		
+				
 		filter = new RedFilter();
 	}
 
@@ -63,6 +64,8 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 			Size previewSize = parameters.getPreviewSize();
 			width = previewSize.width;
 			height = previewSize.height;
+			
+			rootComponent = new Component(0, 0,width, height);
 
 		} catch (IOException e) {
 			e.printStackTrace();

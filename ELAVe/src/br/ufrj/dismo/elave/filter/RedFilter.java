@@ -21,9 +21,9 @@ public class RedFilter extends Filter{
 
 		List<Component> components = new ArrayList<Component>();
 
-		for(int j=0;j<h;j++){
+		for(int j=0;j<h;j+=step){
 
-			for(int i=0;i<w;i++){
+			for(int i=0;i<w;i+=step){
 				
 				if((getRed(rgb[i][j])>0x85)&&(getGreen(rgb[i][j])<0x45)&&(getBlue(rgb[i][j])<0x45)){
 					components.add(new Component(i, j));

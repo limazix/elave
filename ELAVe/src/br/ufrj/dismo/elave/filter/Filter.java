@@ -6,6 +6,8 @@ import br.ufrj.dismo.elave.component.Component;
 
 public abstract class Filter {
 
+	protected int step = 1;
+	
 	public abstract List<Component> filter(int[][] rgb);
 	
 	public int getRed(int rgb){
