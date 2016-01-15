@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ELAVe</string>
+    <string name="action_settings">Settings</string>
+    <string name="warning_no_supported_format">Your camera dont support RGB, it might be slow.</string>
+</resources>
